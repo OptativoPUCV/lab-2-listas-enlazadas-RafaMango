@@ -53,11 +53,15 @@ void * nextList(List * list)
     return list->current->data;
 }
 
-void * lastList(List * list) {
-    return NULL;
+void * lastList(List * list)
+{
+    list->current = list->tail;
+    return list->current->data;
 }
 
 void * prevList(List * list) {
+
+    
     return NULL;
 }
 
