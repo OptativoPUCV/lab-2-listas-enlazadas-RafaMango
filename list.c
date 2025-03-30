@@ -28,7 +28,9 @@ Node * createNode(void * data) {
     return new;
 }
 
-List * createList() { //Struct lista Tengo que ver eso circular.... rayos
+List * createList()
+{ 
+    //Struct lista Tengo que ver eso circular.... rayos
     List* L = (List*)malloc(sizeof(List));
     //if(L == NULL)return NULL;
     L->head = NULL;
@@ -38,8 +40,10 @@ List * createList() { //Struct lista Tengo que ver eso circular.... rayos
     return L;
 }
 
-void * firstList(List * list) {
-    return NULL;
+void * firstList(List * list) 
+{
+    list->current = list->head // apunta al primer elem
+    return list-current;
 }
 
 void * nextList(List * list) {

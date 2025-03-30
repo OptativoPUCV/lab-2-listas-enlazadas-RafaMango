@@ -24,3 +24,20 @@ Sun 30 Mar 2025 02:37:58 AM UTC:
  tests:  1|5
 total_score: 10/70
 d0680af
+Sun 30 Mar 2025 02:39:38 AM UTC: 
+ list.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:45:31: error: expected ‘;’ before ‘return’
+   45 |     list->current = list->head // apunta al primer elem
+      |                               ^
+      |                               ;
+   46 |     return list-current;
+      |     ~~~~~~                     
+list.c:47:1: error: control reaches end of non-void function [-Werror=return-type]
+   47 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+029f7e4
