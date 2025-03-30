@@ -28,8 +28,15 @@ Node * createNode(void * data) {
     return new;
 }
 
-List * createList() {
-     return NULL;
+List * createList() { //Struct lista Tengo que ver eso circular.... rayos
+    List* L = (List*)malloc(sizeof(List));
+    if(L == NULL)return NULL;
+    L->head = NULL;
+    l->tail = NULL;
+    L->current = NULL;
+    
+    
+    return L;
 }
 
 void * firstList(List * list) {

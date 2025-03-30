@@ -1,0 +1,14 @@
+Sat 29 Mar 2025 07:55:55 PM UTC: 
+ list.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Sun 30 Mar 2025 02:37:09 AM UTC: 
+ list.c | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:35:5: error: ‘l’ undeclared (first use in this function)
+   35 |     l->tail = NULL;
+      |     ^
+list.c:35:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+25021aa
