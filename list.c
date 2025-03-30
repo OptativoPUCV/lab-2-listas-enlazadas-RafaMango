@@ -42,6 +42,7 @@ List * createList()
 
 void * firstList(List * list) 
 {
+    if(list->head == NULL)return NULL;
     list->current = list->head; // apunta al primer elem
     return list->current->data;
 }
