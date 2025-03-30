@@ -43,7 +43,8 @@ void * firstList(List * list)
 {
     if(list->head == NULL)return NULL; 
     list->current = list->head; // apunta al primer elem
-    return list->current->data; // devulve el dato del nodo que apunta al dato actual de la lista
+    //return list->current->data; // devulve el dato del nodo que apunta al dato actual de la lista
+    return NULL;
 }
 
 void * nextList(List * list)
@@ -51,21 +52,24 @@ void * nextList(List * list)
     if(list->current->next == NULL || list->current == NULL)return NULL;
     //Siguiende del siguiente
     list->current = list->current->next;
-    return list->current->data;
+    //return list->current->data;
+    return NULL;
 }
 
 void * lastList(List * list)
 {
     if(list == NULL || list->tail == NULL)return NULL;
     list->current = list->tail;
-    return list->current->data;
+    //return list->current->data;
+    return NULL;
 }
 
 void * prevList(List * list) {
 
     if(list->current == NULL || list->current->prev == NULL)return NULL;
     list->current = list->current->prev;
-    return list->current->data;
+    //return list->current->data;
+    return NULL;
 }
 
 void pushFront(List * list, void * data) 
