@@ -146,6 +146,29 @@ void * popCurrent(List * list) //No se como emepzar
         list->current = NULL;
         return dato;
     }
+    if(list->current->prev != NULL) //existe (anterior)
+    {
+        list->current->prev->next = list->current->next;
+    }
+    else //actualizar nodo, si se elimina el primer nodo
+    {
+        list->head = list->current->next;
+    }
+    if(list->current->next != NULL) //existe (siguiente)
+    {
+        list->current->next->prev = list->current->prev;
+    }
+    else //actualizar nodo, si se elimina el ultimo nodo
+    {
+        list->tail = list->current->prev;
+    }
+    Node *siguienteNode = list->current->next;
+    free(list->current);
+
+    list->current = siguienteNode;
+    return dato;
+
+    
 }
 
 void cleanList(List * list) 
