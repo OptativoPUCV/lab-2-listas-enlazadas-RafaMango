@@ -50,7 +50,7 @@ void * firstList(List * list)
 void * nextList(List * list)// ERROR EN ESTA FUNCION 
 {
     if(list == NULL || list->current == NULL || list->current->next == NULL )return NULL;
-    //Siguiende del siguiente
+    //Siguiente del siguiente
     list->current = list->current->next;
     return list->current->data;
     //return NULL;
@@ -64,8 +64,8 @@ void * lastList(List * list)
     //return NULL;
 }
 
-void * prevList(List * list) {
-
+void * prevList(List * list)
+{
     if(list->current == NULL || list->current->prev == NULL)return NULL;
     list->current = list->current->prev;
     return list->current->data;
@@ -96,7 +96,8 @@ void pushFront(List * list, void * data)
     
 }
 
-void pushBack(List * list, void * data) {
+void pushBack(List * list, void * data) 
+{
     list->current = list->tail;
     pushCurrent(list,data);
 }
@@ -108,12 +109,13 @@ void pushCurrent(List * list, void * data) //agrega elemento oen posicion actual
     nuevoNodo->next = list->current->next; //asigna a prev el dato al siguiente nodo del actual
     nuevoNodo->prev = list->current; //asigna, conecta nodo al actual
 
-    if(list->current->next != NULL){
+    if(list->current->next != NULL)
+    {
         list->current->next->prev = nuevoNodo;
     }
     //conexion current con nuevo nodo
     list->current->next = nuevoNodo;
-    if(list->tail == list->current)
+    if(list->tail == list->current) //Si es que el dato actual es el ultimo dato(nodo)
     {
         list->tail = nuevoNodo;
     }
@@ -131,14 +133,28 @@ void * popBack(List * list)
     return popCurrent(list);
 }
 
-void * popCurrent(List * list)
+void * popCurrent(List * list) //No se como emepzar
 {
+    if(list == NULL || list->current == NULL)return NULL;
+    void* dato = list->current->data; //dato nodo actual
+
+    if(list->head == list->tail) //solo un nodo
+    {
+        free(list->current);
+        list->head = NULL;
+        list->tail = NULL;
+        list->current = NULL;
+        return dato;
+    }
+    
     
     return NULL;
 }
 
-void cleanList(List * list) {
-    while (list->head != NULL) {
+void cleanList(List * list) 
+{
+    while (list->head != NULL) 
+    {
         popFront(list);
     }
 }
