@@ -103,7 +103,7 @@ void pushBack(List * list, void * data) {
 
 void pushCurrent(List * list, void * data) //agrega elemento oen posicion actual de la lista
 {
-    nuevo = list->current;
+    void nuevo = list->current;
     if(list->current == NULL)return; 
     Node* nuevoNodo = createNode(data); //memoria
     nuevoNodo->next = nuevo->next; //asigna a prev el dato al siguiente nodo del actual
