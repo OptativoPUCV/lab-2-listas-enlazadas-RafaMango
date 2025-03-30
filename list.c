@@ -47,12 +47,12 @@ void * firstList(List * list)
     //return NULL;
 }
 
-void * nextList(List * list)
+void * nextList(List * list)// ERROR EN ESTA FUNCION 
 {
     if(list->current->next == NULL || list->current == NULL)return NULL;
     //Siguiende del siguiente
     list->current = list->current->next;
-    return list->current->data;
+    //return list->current->data;
     //return NULL;
 }
 
