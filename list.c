@@ -59,7 +59,7 @@ void * nextList(List * list)// ERROR EN ESTA FUNCION
 void * lastList(List * list)
 {
     if(list->tail == NULL)return NULL;
-    list->current = list->tail;
+    list->current = list->tail; //current dato actual, asigna el ultimo 
     return list->current->data;
     //return NULL;
 }
@@ -89,8 +89,9 @@ void pushFront(List * list, void * data)
         list->tail = nuevoNodo;
     }
     list->head = nuevoNodo;
-    if(list->head->next != NULL){
-            list->head->next->prev = list->head;
+    if(list->head->next != NULL)
+    {
+        list->head->next->prev = list->head;
     }
     
 }
@@ -100,20 +101,31 @@ void pushBack(List * list, void * data) {
     pushCurrent(list,data);
 }
 
-void pushCurrent(List * list, void * data) {
+void pushCurrent(List * list, void * data) //agrega elemento oen posicion actual de la lista
+{
+    if(list->current == NULL)return; 
+    Node* nuevoNodo = createNode(data); //memoria
+    nuevoNodo->next = list->current->next; //asigna a prev el dato al siguiente nodo del actual
+    nuevoNodo->prev = list->current; //asigna, conecta nodo al actual
+    
+    
 }
 
-void * popFront(List * list) {
+void * popFront(List * list) 
+{
     list->current = list->head;
     return popCurrent(list);
 }
 
-void * popBack(List * list) {
+void * popBack(List * list) 
+{
     list->current = list->tail;
     return popCurrent(list);
 }
 
-void * popCurrent(List * list) {
+void * popCurrent(List * list)
+{
+    
     return NULL;
 }
 
