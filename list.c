@@ -43,7 +43,7 @@ List * createList()
 void * firstList(List * list) 
 {
     list->current = list->head; // apunta al primer elem
-    return list->current;
+    return list->current->data;
 }
 
 void * nextList(List * list) {
