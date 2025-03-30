@@ -146,9 +146,6 @@ void * popCurrent(List * list) //No se como emepzar
         list->current = NULL;
         return dato;
     }
-    
-    
-    return NULL;
 }
 
 void cleanList(List * list) 
