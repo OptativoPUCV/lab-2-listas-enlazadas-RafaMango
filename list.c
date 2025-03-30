@@ -52,8 +52,8 @@ void * nextList(List * list)// ERROR EN ESTA FUNCION
     if(list == NULL || list->current->next == NULL || list->current == NULL)return NULL;
     //Siguiende del siguiente
     list->current = list->current->next;
-    //return list->current->data;
-    return NULL;
+    return list->current->data;
+    //return NULL;
 }
 
 void * lastList(List * list)
