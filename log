@@ -391,3 +391,9 @@ list.c:113:14: error: invalid type argument of ‘->’ (have ‘int’)
 cc1: all warnings being treated as errors
 Compilation failed
 f87dc06
+Sun 30 Mar 2025 08:50:29 PM UTC: 
+ list.c | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+ tests:  10|2
+total_score: 45/70
+c40d0a0
