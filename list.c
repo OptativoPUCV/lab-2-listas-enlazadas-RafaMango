@@ -42,13 +42,17 @@ List * createList()
 
 void * firstList(List * list) //NO se que le falta
 {
-    if(list->head == NULL || list == NULL)return NULL; 
+    if(list->head == NULL)return NULL; 
     list->current = list->head; // apunta al primer elem
-    return list->current->data; //No entiendo bien esto, 
+    return list->current->data; // devulve el dato del nodo que apunta al dato actual de la lista 
 }
 
-void * nextList(List * list) {
-    return NULL;
+void * nextList(List * list)
+{
+    if(list->current->next == NULL)return NULL;
+    //Siguiende del siguiente
+     list->current = list->current->next;
+    return lista->current->data;
 }
 
 void * lastList(List * list) {
