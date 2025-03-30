@@ -40,11 +40,11 @@ List * createList()
     return L;
 }
 
-void * firstList(List * list) 
+void * firstList(List * list) //NO se que le falta
 {
-    if(list->head == NULL)return NULL;
+    if(list->head == NULL || list == NULL)return NULL; 
     list->current = list->head; // apunta al primer elem
-    return list->current->data;
+    return list->current->data; //No entiendo bien esto, 
 }
 
 void * nextList(List * list) {
