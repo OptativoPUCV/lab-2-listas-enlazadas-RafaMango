@@ -30,11 +30,10 @@ Node * createNode(void * data) {
 
 List * createList() { //Struct lista Tengo que ver eso circular.... rayos
     List* L = (List*)malloc(sizeof(List));
-    if(L == NULL)return NULL;
+    //if(L == NULL)return NULL;
     L->head = NULL;
     L->tail = NULL;
     L->current = NULL;
-    
     
     return L;
 }
