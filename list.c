@@ -58,7 +58,7 @@ void * nextList(List * list)// ERROR EN ESTA FUNCION
 
 void * lastList(List * list)
 {
-    if(list == NULL || list->tail == NULL)return NULL;
+    if(list->tail == NULL)return NULL;
     list->current = list->tail;
     return list->current->data;
     //return NULL;
