@@ -113,7 +113,10 @@ void pushCurrent(List * list, void * data) //agrega elemento oen posicion actual
     }
     //conexion current con nuevo nodo
     list->current->next = nuevoNodo;
-    
+    if(list->tail == list->current)
+    {
+        list->tail = nuevoNodo;
+    }
 }
 
 void * popFront(List * list) 
