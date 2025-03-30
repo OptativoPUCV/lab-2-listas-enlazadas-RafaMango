@@ -30,9 +30,7 @@ Node * createNode(void * data) {
 
 List * createList()
 { 
-    //Struct lista Tengo que ver eso circular.... rayos
     List* L = (List*)malloc(sizeof(List));
-    //if(L == NULL)return NULL;
     L->head = NULL;
     L->tail = NULL;
     L->current = NULL;
@@ -40,9 +38,9 @@ List * createList()
     return L;
 }
 
-void * firstList(List * list) //NO se que le falta
+void * firstList(List * list)
 {
-    //if(list->head == NULL)return NULL; 
+    if(list->head == NULL)return NULL; 
     list->current = list->head; // apunta al primer elem
     return list->current->data; // devulve el dato del nodo que apunta al dato actual de la lista
 }
