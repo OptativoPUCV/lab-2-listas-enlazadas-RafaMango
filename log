@@ -354,3 +354,14 @@ Sun 30 Mar 2025 08:41:47 PM UTC:
  tests:  10|2
 total_score: 45/70
 e935f1d
+Sun 30 Mar 2025 08:48:12 PM UTC: 
+ list.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:106:5: error: ‘nuevo’ undeclared (first use in this function)
+  106 |     nuevo = list->current;
+      |     ^~~~~
+list.c:106:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+09bd566
