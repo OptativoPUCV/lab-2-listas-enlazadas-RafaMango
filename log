@@ -12,3 +12,9 @@ list.c:35:5: error: ‘l’ undeclared (first use in this function)
 list.c:35:5: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 25021aa
+Sun 30 Mar 2025 02:37:18 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+7722083

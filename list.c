@@ -32,7 +32,7 @@ List * createList() { //Struct lista Tengo que ver eso circular.... rayos
     List* L = (List*)malloc(sizeof(List));
     if(L == NULL)return NULL;
     L->head = NULL;
-    l->tail = NULL;
+    L->tail = NULL;
     L->current = NULL;
     
     
