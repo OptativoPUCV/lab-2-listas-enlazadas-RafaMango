@@ -49,7 +49,7 @@ void * firstList(List * list)
 
 void * nextList(List * list)// ERROR EN ESTA FUNCION 
 {
-    if(list == NULL || list->current->next == NULL || list->current == NULL)return NULL;
+    if(list == NULL || list->current == NULL || list->current->next == NULL )return NULL;
     //Siguiende del siguiente
     list->current = list->current->next;
     return list->current->data;
