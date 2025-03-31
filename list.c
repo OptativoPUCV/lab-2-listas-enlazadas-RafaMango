@@ -137,9 +137,7 @@ void * popCurrent(List * list)
     if(list->head == list->tail) //solo un nodo
     {
         free(list->current);
-        list->head = NULL;
-        list->tail = NULL;
-        list->current = NULL;
+        list->head = list->tail = list->current = NULL;
         return dato;
     }
     if(list->current->prev != NULL) //existe (anterior)
