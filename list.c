@@ -43,11 +43,11 @@ void * firstList(List * list)
 {
     if(list->head == NULL)return NULL; 
     list->current = list->head; // apunta al primer elem
-    return list->current->data; // devulve el dato del nodo que apunta al dato actual de la lista
+    return list->current->data; 
     //return NULL;
 }
 
-void * nextList(List * list)// ERROR EN ESTA FUNCION 
+void * nextList(List * list)
 {
     if(list == NULL || list->current == NULL || list->current->next == NULL )return NULL;
     //Siguiente del siguiente
@@ -133,7 +133,7 @@ void * popBack(List * list)
     return popCurrent(list);
 }
 
-void * popCurrent(List * list) //No se como emepzar
+void * popCurrent(List * list)
 {
     if(list == NULL || list->current == NULL)return NULL;
     void* dato = list->current->data; //dato nodo actual
