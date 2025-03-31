@@ -90,13 +90,6 @@ void pushFront(List * list, void * data)
     }
     list->head = nuevoNodo; // nuevo nodo asignado como primero
     
-    /***
-    if(list->head->next != NULL)
-    {
-        list->head->next->prev = list->head;
-    }
-    ***/
-    
 }
 
 void pushBack(List * list, void * data) 
