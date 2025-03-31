@@ -49,7 +49,7 @@ void * firstList(List * list)
 
 void * nextList(List * list)
 {
-    if(list == NULL || list->current == NULL || list->current->next == NULL )return NULL;
+    if(list->current == NULL || list->current->next == NULL )return NULL;
     //Siguiente del siguiente
     list->current = list->current->next;
     return list->current->data;
@@ -166,16 +166,6 @@ void * popCurrent(List * list)
 
     
 }
-/***
-RECORDATORIO////
-REVISAR OTRA VEZ POR COMENTARIOS RAROS COMO ESTE QUE HAYA DEJADO PARA BORRARLO
-VER SI CAMBIO ALGO DE ALGUNA FUNCION COMO LA ULTIMA PARA QUE ESTE MAS ORDENADO... MAS EFICIENTE NO SE COMO
-REVISAR PPT DE TDA Y NODOS PARA VERIFICAR SI PUEDO HACER ALGUN CAMBIO
-
-QUIZAR PONER MAS COMENTARIOS PARA NO PERDERME,, Y VER SI CON * PUEDO AHORRAR YO ME ENTIENDO ESO 21:45
-
-***/
-
 
 void cleanList(List * list) 
 {
